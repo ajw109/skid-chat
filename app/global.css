@@ -1,0 +1,170 @@
+* {
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("assets/background.jpg")
+}
+
+main {
+    display: flex;
+    width: 80vw;
+    height: 80vh;
+    background: linear-gradient(to bottom, #f8f8f8, #cfcfcf);
+    border-radius: 15px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+    color: #383838;
+}
+
+section {
+    width: 100%
+}
+
+section.populated { /*when there are messages in the app*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* aligns content to the top */
+    overflow-y: auto; /* provides vertical scrolling only when needed and hides horizontal scrollbars */
+    overflow-x: hidden; /* hides horizontal scroll bars */
+    scroll-behavior: smooth; 
+}
+
+.start-text { /*the paragraph essentially*/
+    padding: 0 80px; /*padding of 0 from top and bottom, but 80 from left to right*/
+}
+
+.logo-starter {
+    width: 450px !important; /* bigger */
+    margin-top: 20px; /* lower down */
+    margin-bottom: 0px;
+}
+
+.logo-chat {
+    width: 350px; /* normal size when chatting */
+}
+
+form {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    border-top: #828282 solid 2px;
+    padding-top: 20px;
+    border-radius: 0 0 10px 10px; /*0 top left, 0 top right, 10px rounded at the two bottom sides*/
+    overflow: hidden;
+}
+
+/* grabbing the input that lives inside the form */
+input.question-box {
+    width: 85%;
+    padding: 10px;
+    font-size: 15px;
+    color: #383838;
+    border: none;
+}
+
+input[type=submit] {
+    width: 15%;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    color: #fff;
+    background-color: #d3b300;
+
+}
+
+input:focus {
+    outline: none;
+}
+
+/* Markdown styling with tight spacing */
+.bubble strong, .bubble b {
+    font-weight: bold;
+    color: #2c2c2c;
+}
+
+.bubble ol, .bubble ul {
+    margin: 6px 0;
+    padding-left: 20px;
+}
+
+.bubble li {
+    margin: 1px 0; /* tight list item spacing */
+    line-height: 1.3;
+}
+
+.bubble p {
+    margin: 4px 0; /* paragraph spacing */
+    line-height: 1.4;
+}
+
+.bubble h1, .bubble h2, .bubble h3, .bubble h4, .bubble h5, .bubble h6 {
+    margin: 6px 0 2px 0; /* header spacing */
+    font-weight: bold;
+}
+
+.bubble {
+    margin: 8px;
+    padding: 8px;
+    font-size: 15px;
+    border: none;
+    color: #383838;
+    box-shadow: #959da533 0 8px 24px;
+    width: 80%;
+    text-align: left;
+    white-space: pre-line; /* preserves line breaks and wrap text */
+}
+
+.bubble.user {
+    border-radius: 20px 20px 0  20px;
+    background-color: #E1F4FFFF;
+    margin-left: auto;
+}
+
+.bubble.assistant {
+    border-radius: 20px 20px 20px 0;
+    background-color: #dce7ff;
+}
+
+.prompt-suggestion-row {
+    width: 100%;
+}
+
+.prompt-suggestion-button {
+    margin: 8px;
+    padding: 8px;
+    font-size: 15px;
+    border: none;
+    background-color: #fff;
+    border-radius: 10px;
+    color: #383838;
+    box-shadow: #959da533 0 8px 24px;
+}
+
+.loader {
+    margin: 10px;
+    width: 60px;
+    aspect-ratio: 4;
+    background:
+        no-repeat radial-gradient(circle closest-side, #383838 90%, #0000) 0 50%,
+        no-repeat radial-gradient(circle closest-side, #383838 90%, #0000) 50% 50%,
+        no-repeat radial-gradient(circle closest-side, #383838 90%, #0000) 100% 50%;
+    background-size: calc(100%/3) 100%;
+    animation: loading 1s infinite linear;
+}   
+
+@keyframes loading {
+    33% { background-size: calc(100%/3) 0, calc(100%/3) 100%, calc(100%/3) 100%; }
+    50% { background-size: calc(100%/3) 100%, calc(100%/3) 0, calc(100%/3) 100%; }
+    66% { background-size: calc(100%/3) 100%, calc(100%/3) 100%, calc(100%/3) 0; }
+}
