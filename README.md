@@ -1,12 +1,10 @@
 # Skid-Chat: RAG-Powered Skidmore Assistant
 
-A Next.js-powered conversational AI system that demonstrates the limitations of Large Language Models (LLMs) and the promise of Retrieval-Augmented Generation (RAG) for domain-specific applications. Skid-Chat is a custom GPT-4-powered chatbot designed to answer Skidmore College-related inquiries by retrieving relevant documentation before generating responses.
+Skid-Chat is a Next.js powered custom GPT-4 chatbot designed to answer Skidmore College-related inquiries by using Retrieval-Augmented Generation (RAG) to retrieve relevant documentation before generating responses.
 
 ## About The Project
 
-This project investigates the extent to which Large Language Models (LLMs) demonstrate true semantic understanding versus reliance on surface-level statistical patterns. Through comprehensive semantic similarity experiments, we discovered that decoder-based models (e.g., GPT), despite their generative fluency, perform poorly on tasks requiring deep semantic discrimination. 
-
-To address these shortcomings, we implemented a retrieval-augmented generation (RAG) framework that allows an LLM to access external information, resulting in Skid-Chat - a domain-specific chatbot that significantly improves response accuracy and relevance for Skidmore-related queries.
+To address the shortcomings of Large Language Models (LLMs) in terms of their lack of true semantic understanding, I implemented a retrieval-augmented generation (RAG) framework that allows an LLM to access external information, resulting in Skid-Chat - a domain-specific chatbot that significantly improves response accuracy and relevance for Skidmore-related queries.
 
 ### Key Features
 
@@ -116,39 +114,15 @@ API routes are located in the `pages/api` directory and are mapped to `/api/*`.
 4. **Context Retrieval**: Most relevant documents are retrieved based on semantic similarity
 5. **Response Generation**: GPT-4 generates responses using retrieved context and user query
 
-## Research Findings
-
-### Semantic Understanding Limitations
-
-Our experiments revealed significant limitations in LLMs' semantic understanding:
-
-- **Decoder Models**: GPT-family models showed poor performance on semantic similarity tasks
-- **Surface-Level Patterns**: Evidence suggests reliance on statistical patterns rather than true comprehension
-- **Task-Specific Performance**: Specialized sentence transformers significantly outperformed general-purpose models
-
-### RAG Benefits
-
-The implementation of RAG architecture demonstrated:
-
-- **Improved Accuracy**: 40-60% improvement in domain-specific query responses
-- **Reduced Hallucination**: Grounding in retrieved documents minimizes fabricated information
-- **Enhanced Relevance**: Context-aware responses tailored to Skidmore-specific needs
-
-## Performance Metrics
-
-- **Response Time**: Average 2-3 seconds including retrieval and generation
-- **Accuracy**: 85%+ accuracy on Skidmore-specific queries (vs. 45% for vanilla GPT-4)
-- **User Satisfaction**: 90%+ satisfaction rate in preliminary user testing
-
 ## Contributing
 
 Contributions are welcome! Here's how you can help:
 
 - **Expand Knowledge Base**: Add new Skidmore-related content and documents
 - **Improve RAG Pipeline**: Optimize retrieval algorithms and embedding strategies  
-- **Enhance UI/UX**: Improve the chatbot interface and user experience
-- **Performance Optimization**: Reduce response times and improve scalability
-- **Testing**: Add comprehensive testing for reliability and accuracy
+- **Enhance UI**: Improve the chatbot interface
+- **Performance Optimization**: Reduce response times
+- **Testing**: Add comprehensive testing
 
 ### Contributing Steps
 
